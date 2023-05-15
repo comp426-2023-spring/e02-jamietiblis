@@ -8,6 +8,7 @@ function gameOptions() {
   document.getElementById("rpsShots").style.display = "none"
   document.getElementById("result").style.display = "none"
   document.getElementById("submission").style.display = "none"
+  document.getElementById("hiddenSubmission").style.display = "none"
 }
 
 function selection() {
