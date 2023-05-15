@@ -1,8 +1,96 @@
 body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
 h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 40px;
+
 }
 
-p {
+h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: white;
+  font-size: 25px;
+  margin: 30px;
+  padding-left: 50px;
+  text-align: center;
+}
+
+a {
+  color: lightskyblue;
+  text-align: center;
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input[type=radio]#rps {
+  accent-color: rgb(55, 121, 180);
+}
+
+input[type=radio]#rpsls {
+  accent-color: rgb(55, 121, 180);
+}
+
+input[type=checkbox]#opponent {
+  accent-color: rgb(55, 121, 180);
+}
+
+input[type=radio]#rock {
+  accent-color: rgb(55, 121, 180);
+}
+
+input[type=radio]#paper {
+  accent-color: rgb(55, 121, 180);
+}
+
+input[type=radio]#scissors {
+  accent-color: rgb(55, 121, 180);
+}
+
+input[type=radio]#lizard {
+  accent-color: rgb(55, 121, 180);
+}
+
+input[type=radio]#spock {
+  accent-color: rgb(55, 121, 180);
+}
+
+div.active {
+  display: block;
+}
+
+p.result {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  border-style: ridge;
+  border-width: 0.01cm;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding-left: 450px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

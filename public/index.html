@@ -1,12 +1,80 @@
-<html>
-    <head>
-        <title>Rock</title>
-        <!-- Link to your script file(s) and CSS in here somewhere -->
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMP 426 Final Project</title>
+    <!-- Link to your script file(s) and CSS in here somewhere -->
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+    </style>
+    <style type="text/css"></style>
+</head>
+
+<body onload="gameOptions()">
     <!-- Your interface markup goes here -->
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
+    <h1>Rock, Paper, Scissors</h1>
+    <ul>
+        <h2>
+            <li><a href="https://www.wikihow.com/Play-Rock,-Paper,-Scissors">Rules for RPS</a></li>
+            <h2>
+    </ul>
+    <ul>
+        <h2>
+            <li><a href="https://www.wikihow.com/Play-Rock-Paper-Scissors-Lizard-Spock">Rules for RPSLS</a></li>
+        </h2>
+    </ul>
+            <div id="options" class="active">
+                <form id="input">
+                    <h3>Would You Like to Play RPS or RPSLS?</h3>
+                    <input type="radio" id="rps" name="game" value="rps" checked onclick="selection()">
+                    <label for="rps">Rock, Paper, Scissors</label>
+                    <br><br>
 
-    </body>
+                    <input type="radio" id="rpsls" name="game" value="rpsls" onclick="selection()">
+                    <label for="rpsls">Rock, Paper, Scissors, Lizard, Spock</label>
+                    <br><br>
+
+                    <h3>Would Like To Play Against An Opponent?</h3>
+                    <input type="checkbox" id="opponent" name="selectOpponent" value="opponent" onclick="selection()">
+                    <label for="opponent">Yes, please pair me with a virtual opponent.</label>
+                    <br><br>
+            </div>
+
+            <div id="rpsShots">
+                <h3>Choose Your Move:</h3>
+                <input type="radio" id="rock" name="shot" value="rock" class="rpsShot" checked>
+                <label class="shot">Rock</label>
+                <input type="radio" id="paper" name="shot" value="paper" class="rpsShot">
+                <label class="shot">Paper</label>
+                <input type="radio" id="scissors" name="shot" value="scissors" class="rpsShot">
+                <label class="shot">Scissors</label>
+
+                <div id="rpslsShots">
+                    <input type="radio" id="lizard" name="shot" value="lizard" class="rpslsShot">
+                    <label id="lizardLab" class="rpslsShot">Lizard</label>
+                    <input type="radio" id="spock" name="shot" value="spock" class="rpslsShot">
+                    <label id="spockLab" class="rpslsShot">Spock</label>
+                </div>
+            </div>
+            <button type="submit" id="submission">Hidden</button>
+            </form>
+            <br><br>
+
+            <button type="button" id="play" onclick="playGame()">Play</button>
+            <button type="button" id="startOver" onclick="startOver()">Start Over</button>
+
+
+            <!-- Result -->
+            <p id="result" class="result">
+                Result text
+                <br><br>
+            </p>
+
+</body>
+
 </html>
