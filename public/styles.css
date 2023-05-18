@@ -74,15 +74,15 @@ input[type=radio]#spock {
   accent-color: rgb(55, 121, 180);
 }
 
+button[type=submit]#hiddenSubmission {
+  display: none;
+}
+
 div.active {
   display: block;
 }
 
-.hidden {
-  display: none;
-}
-
-
+/*
 p.result {
   font-size: 20px;
   font-weight: 300;
@@ -90,6 +90,7 @@ p.result {
   border-style: ridge;
   border-width: 0.01cm;
 }
+*/
 
 .button {
   border: none;
