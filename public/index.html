@@ -38,9 +38,8 @@
                     <h3>Would Like To Play Against An Opponent?</h3>
                     <input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="showHideShots()">
                     <label for="opponent">Yes, please pair me with a virtual opponent.</label>
-		        </form>
+	<!--       </form>  temporarily moving it due to validation issue -->
                 </div>
-
             <div id="rpsShots" class="rps shots">
                 <h3>Choose Your Move:</h3>
                 <input type="radio" id="rock" name="shot" value="rock" class="rps shots" checked>
@@ -57,8 +56,8 @@
                     <label class="shots rpsls">Spock</label>
                 </div>
             </div>
+        </form>
             <br><br>
-
             <button type="button" id="play" onclick="playGame()">Play</button>
             <button type="button" id="startover" onclick="startOver()">Start Over</button>
 </body>
