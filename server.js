@@ -1,6 +1,7 @@
 //// Load most basic dependencies
 // Create require function 
 // https://nodejs.org/docs/latest-v18.x/api/module.html#modulecreaterequirefilename
+import {rps, rpsls} from './lib/rpsls.js'; 
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 // The above two lines allow us to use ES methods and CJS methods for loading
@@ -103,7 +104,10 @@ process.on('SIGINT', () => {
     })
 })
 
-import { rps, rpsls } from './lib/rpsls.js'
+// import { rps, rpsls } from './lib/rpsls.js'
+
+// might need to use lib and bin for import if this doesn't work and 
+// revert the import back to previous code 
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
