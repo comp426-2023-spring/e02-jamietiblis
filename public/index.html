@@ -7,14 +7,13 @@
     <title>COMP 426 Final Project</title>
     <!-- Link to your script file(s) and CSS in here somewhere -->
     <link rel="stylesheet" href="./styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./scripts.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
     </style>
 </head>
 
-<body onload="showHideShots()">
+<body onload="gameOptions()">
     <!-- Your interface markup goes here -->
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
     <h1>Rock, Paper, Scissors</h1>
@@ -24,38 +23,51 @@
     <ul>
             <li><a href="https://www.wikihow.com/Play-Rock-Paper-Scissors-Lizard-Spock">Rules for RPSLS</a></li>
     </ul>
-            <div id="options" class="active"> 
-                <form id="userinput" class ="" action="javascript:void(0);">
+            <div id="options" class="active">
+                <form id="input">
                     <h3>Would You Like to Play RPS or RPSLS?</h3>
-                    <input type="radio" id="rps" name="game" value="rps" checked onclick="showHideShots()">
+                    <input type="radio" id="rps" name="game" value="rps" checked onclick="selection()">
                     <label for="rps">Rock, Paper, Scissors</label>
                     <br><br>
-                    <input type="radio" id="rpsls" name="game" value="rpsls" onclick="showHideShots()">
+
+                    <input type="radio" id="rpsls" name="game" value="rpsls" onclick="selection()">
                     <label for="rpsls">Rock, Paper, Scissors, Lizard, Spock</label>
                     <br><br>
+
                     <h3>Would Like To Play Against An Opponent?</h3>
-                    <input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="showHideShots()">
+                    <input type="checkbox" id="opponent" name="selectOpponent" value="opponent" onclick="selection()">
                     <label for="opponent">Yes, please pair me with a virtual opponent.</label>
-                    <button type="submit" id="hiddenSubmission"></button>
-                    </form>
+                    <br><br>
+                    <button type="submit" id="hiddenSubmission">Hidden</button>
+                </form>
                 </div>
-            <div id="rpsShots" class="rps shots">
+
+            <div id="rpsShots">
                 <h3>Choose Your Move:</h3>
-                <input type="radio" id="rock" name="shot" value="rock" class="rps shots" checked>
-                <label class="shots rps">Rock</label>
-                <input type="radio" id="paper" name="shot" value="paper" class="rps shots">
-                <label class="shots rps">Paper</label>
-                <input type="radio" id="scissors" name="shot" value="scissors" class="rps shots">
-                <label class="shots rps">Scissors</label>
-                <div id="rpslsShots" class="rpsls shots">
-                    <input type="radio" id="lizard" name="shot" value="lizard" class="rpsls shots">
-                    <label class="shots rpsls">Lizard</label>
-                    <input type="radio" id="spock" name="shot" value="spock" class="rpsls shots">
-                    <label class="shots rpsls">Spock</label>
+                <input type="radio" id="rock" name="shot" value="rock" class="rpsShot" checked>
+                <label class="shot">Rock</label>
+                <input type="radio" id="paper" name="shot" value="paper" class="rpsShot">
+                <label class="shot">Paper</label>
+                <input type="radio" id="scissors" name="shot" value="scissors" class="rpsShot">
+                <label class="shot">Scissors</label>
+
+                <div id="rpslsShots">
+                    <input type="radio" id="lizard" name="shot" value="lizard" class="rpslsShot">
+                    <label id="lizardLab" class="rpslsShot">Lizard</label>
+                    <input type="radio" id="spock" name="shot" value="spock" class="rpslsShot">
+                    <label id="spockLab" class="rpslsShot">Spock</label>
                 </div>
             </div>
+            <button type="submit" id="submission">Hidden</button>
             <br><br>
+
             <button type="button" id="play" onclick="playGame()">Play</button>
-            <button type="button" id="startover" onclick="startOver()">Start Over</button>
+            <button type="button" id="startOver" onclick="startOver()">Start Over</button>
+
+            <!-- Result -->
+            <p id="result" class="result">
+                Result text
+                <br><br>
+            </p>
 </body>
 </html>
