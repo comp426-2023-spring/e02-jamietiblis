@@ -74,11 +74,10 @@ input[type=radio]#spock {
   accent-color: rgb(55, 121, 180);
 }
 
-/*
+
 div.active {
   display: block;
 }
-*/
 
 .button {
   border: none;
