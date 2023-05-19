@@ -1,4 +1,7 @@
 function showHideShots() {
+  document.getElementById("submission").style.display = "none"
+  document.getElementById("hiddenSubmission").style.display = "none"
+
   let check = document.getElementById('opponent');
 if (check.checked == true) {
   $('.shots').show()
